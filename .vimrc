@@ -1,11 +1,11 @@
 " Editing settings
 set number
-set cindent
-set cindent
+set autoindent
 set mouse=a
 set ttymouse=xterm2
 set tabstop=4
 set shiftwidth=4
+set expandtab
 colorscheme slate
 syntax on
 
@@ -28,5 +28,5 @@ map <F3> <c-w><c-]>
 map tp :tabnext<CR>
 map tn :tabprevious<CR>
 map <F10> :tabclose <CR>
-
+map <F5> :e ++ff=dos <CR>
 
