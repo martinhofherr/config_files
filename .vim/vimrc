@@ -6,7 +6,7 @@ set ttymouse=xterm2
 set tabstop=4
 set shiftwidth=4
 set expandtab
-colorscheme slate
+colorscheme CandyPaper
 syntax on
 
 " allow backspace for deleting chars in insert mode
@@ -29,4 +29,3 @@ map tp :tabnext<CR>
 map tn :tabprevious<CR>
 map <F10> :tabclose <CR>
 map <F5> :e ++ff=dos <CR>
-
