@@ -5,11 +5,23 @@ set softtabstop=4
 set expandtab
 set mouse=nv
 
-:colorscheme sierra
-
 "netrw file browser config
 map <F4> :Vexplore<CR>
 let g:netrw_browse_split=4
+
+" open file vertically to the right
+augroup netrw_mappings
+    autocmd!
+    autocmd filetype netrw call Netrw_mappings()
+augroup END
+function! OpenToRight()
+  :rightbelow vnew
+  :wincmd p
+  :normal P
+endfunction
+function! Netrw_mappings()
+    noremap V :call OpenToRight()<cr>
+endfunction
 
 "<F3> close
 map <F3> :q<CR>
@@ -175,6 +187,9 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " Vim Colorschemes
 Plug 'https://github.com/rafi/awesome-vim-colorschemes'
+
+" Vim airline
+Plug 'https://github.com/vim-airline/vim-airline'
 
 " Initialize plugin system
 call plug#end()
