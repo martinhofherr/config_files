@@ -2,6 +2,8 @@
 "
 set number
 set softtabstop=4
+set tabstop=4
+set shiftwidth=4
 set expandtab
 set mouse=nv
 
@@ -190,6 +192,9 @@ Plug 'https://github.com/rafi/awesome-vim-colorschemes'
 
 " Vim airline
 Plug 'https://github.com/vim-airline/vim-airline'
+
+" Vim Fugitive
+Plug 'https://github.com/tpope/vim-fugitive'
 
 " Initialize plugin system
 call plug#end()
